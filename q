@@ -1,0 +1,13 @@
+[34me2629ee[31m (HEAD -> master) [37mfeat: nova tabela de categoria - [36mGabriel Matos, [32m4 days ago
+[34mf26477f[31m [37mfeat: criado a tabela de streamer e a tabela de genrer - [36mGabriel Matos, [32m4 days ago
+[34m212c33a[31m (origin/master) [37mfeat: criado a feature de criar filmes - [36mGabriel Matos, [32m7 days ago
+[34m2194c49[31m [37mchore: configuração do prisma, modificando o movies, configuração do multer - [36mGabriel Matos, [32m7 days ago
+[34m5e56dc0[31m [37mfeat: listagem de filmes curtidos - [36mGabriel Matos, [32m7 days ago
+[34m02cb49a[31m [37mchore: removendo dependencias - [36mGabriel Matos, [32m7 days ago
+[34m20d213c[31m [37mfeat: adição da rota de like - [36mGabriel Matos, [32m7 days ago
+[34mf4c82f2[31m [37mfeat: adição do controller de authentificacao - [36mGabriel Matos, [32m7 days ago
+[34ma377650[31m [37mfeat: criação de um controller para authentificação do usuario - [36mGabriel Matos, [32m7 days ago
+[34md6d17ee[31m [37mfeat: modificação no banco, adição de uuid - [36mGabriel Matos, [32m7 days ago
+[34m54be5e0[31m [37mfeat: Criado novo useCase o de login de usuarios - [36mGabriel Matos, [32m8 days ago
+[34m854c59c[31m [37mfeat: Concluido o controller de signup - [36mGabriel Matos, [32m8 days ago
+[34m67f5f5a[31m [37mchore: configurada a estrutura inicial da aplicação - [36mGabriel Matos, [32m8 days ago

@@ -1,0 +1,70 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String   @id @default(uuid())
+  name     String
+  email    String   @unique
+  password String
+  role     String   @default("user")
+  likes    Rating[]
+
+  @@map("users")
+}
+
+model Movie {
+  id          String  @id @default(uuid())
+  name        String  @unique
+  thumbnail   String
+  nameImg     String
+  size        Int?
+  description String?
+  cast        String
+
+  likes Rating[] // Gostei ; Não Gostei ; Assistido; Não Assistido
+
+  genres    Genre[] // Adiciona um campo de relacionamento com Genre
+  streamers Streamer[] // Adiciona um campo de relacionamento com Streamer
+
+  @@map("movies")
+}
+
+model Rating {
+  id        String   @id @default(uuid())
+  type      String
+  userId    String
+  movieId   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user  User  @relation(fields: [userId], references: [id])
+  movie Movie @relation(fields: [movieId], references: [id])
+}
+
+model Genre {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+
+  movies Movie[] // Adiciona um campo de relacionamento com Movie
+
+  @@map("genres")
+}
+
+model Streamer {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+  link String
+
+  movies Movie[] // Adiciona um campo de relacionamento com Movie
+
+  @@map("streamers")
+}
